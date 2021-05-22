@@ -62,9 +62,9 @@ class PenaltyFragment : Fragment() {
                     Log.d("서버통신","성공!!!")
                     val random = response.body()?.data?.penaltyIdx
                     when (random){
-                        0-> binding.penalty.setImageResource(R.drawable.and)
-                        1-> binding.penalty.setImageResource(R.drawable.beme_icon)
-                        else -> binding.penalty.setImageResource(R.drawable.logo)
+                        0-> binding.penalty.setImageResource(R.drawable.graphic_cup_half)
+                        1-> binding.penalty.setImageResource(R.drawable.graphic_cup_one)
+                        else -> binding.penalty.setImageResource(R.drawable.graphic_cup_two)
                     }
                     Log.d("랜덤값","$random")
                 }

@@ -19,6 +19,7 @@
             android:layout_height="58dp"
             android:layout_marginStart="140dp"
             android:layout_marginEnd="131dp"
+            android:layout_marginTop="63dp"
             android:layout_marginBottom="615dp"
             android:gravity="center_horizontal"
             android:textColor="@color/black"
@@ -28,7 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="벌칙!" />
+            android:text="벌칙!" />
 
         <TextView
             android:layout_width="100dp"
@@ -40,11 +41,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="157dp"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="574dp"
+            android:layout_marginTop="157dp"
             android:layout_marginStart="136dp"
             android:layout_marginEnd="127dp"
-            tools:text="술잔 비우기" />
+            android:text="술잔 비우기"
+            />
 
         <Button
             android:id="@+id/btn_next"
@@ -88,8 +91,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="400dp"
-            tools:src="@drawable/logo" />
+            android:layout_marginTop="214dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="202dp"
+            tools:src="@drawable/graphic_cup_one" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
