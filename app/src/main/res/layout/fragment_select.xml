@@ -8,68 +8,124 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_171"
+        android:paddingHorizontal="20dp">
 
-        <ImageView
-            android:id="@+id/img_color"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher_round"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="180dp"
+            android:background="@drawable/ic_inner_background">
 
-        <TextView
-            android:id="@+id/tv_answer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="에게 질문해주시면 됩니다."
-            app:layout_constraintTop_toTopOf="@+id/img_color"
-            app:layout_constraintStart_toEndOf="@id/img_color"/>
+            <ImageView
+                android:id="@+id/img_color"
+                android:layout_width="17dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1"
+                android:background="@drawable/shape_circle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"/>
 
-        <TextView
-            android:id="@+id/tv_question"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="당신의 기억 속에 000씨를 좋아합니까?"
-            app:layout_constraintTop_toBottomOf="@+id/img_color"
-            app:layout_constraintStart_toStartOf="@id/img_color"/>
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="에게 질문해주세요"
+                android:textColor="#2d2d2d"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_color"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="7dp"
+                android:textSize="18sp"/>
 
-        <TextView
-            android:id="@+id/tv_timer_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="시간이 끝났습니다."
-            app:layout_constraintTop_toBottomOf="@+id/tv_question"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/tv_mark"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:text=""
+                app:layout_constraintTop_toTopOf="@+id/tv_fix"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fix"
+                app:layout_constraintStart_toStartOf="@id/tv_fix"
+                app:layout_constraintEnd_toEndOf="@id/tv_fix"/>
 
-        <ImageView
-            android:id="@+id/img_clock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
-            app:layout_constraintTop_toBottomOf="@id/tv_timer_end"
-            app:layout_constraintStart_toStartOf="@id/tv_timer_end"/>
+            <TextView
+                android:id="@+id/tv_fix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="당신의 기억 속에,"
+                android:textColor="#2d2d2d"
+                android:background="#ccfbb53c"
+                app:layout_constraintTop_toBottomOf="@+id/img_color"
+                app:layout_constraintStart_toStartOf="@id/img_color"
+                android:layout_marginTop="28dp"
+                android:textSize="23sp"/>
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000씨를\n좋아했었나요?"
+                android:textColor="#2d2d2d"
+                app:layout_constraintTop_toBottomOf="@id/tv_fix"
+                app:layout_constraintStart_toStartOf="@id/tv_fix"
+                android:layout_marginTop="3dp"
+                android:textSize="36sp"/>
+
+            <ImageView
+                android:id="@+id/img_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cv_color="#ffffff"
+                android:src="@drawable/clock"
+                app:layout_constraintTop_toBottomOf="@id/tv_question"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="77dp"/>
+
+            <TextView
+                android:id="@+id/tv_timer_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간이 끝났습니다."
+                android:textColor="#2d2d2d"
+                app:layout_constraintTop_toBottomOf="@id/img_clock"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="6dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/btn_next"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="다음"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_clock"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:textColor="#2d2d2d"
+            android:textSize="20sp"
+            android:background="@drawable/select_btn_background"
+            app:layout_constraintTop_toBottomOf="@id/cl_inner"
+            app:layout_constraintBottom_toTopOf="@id/btn_penalty"/>
 
         <Button
             android:id="@+id/btn_penalty"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="벌칙 받기"
+            android:textColor="#2d2d2d"
+            android:textSize="20sp"
+            android:background="@drawable/select_btn_background"
             app:layout_constraintStart_toStartOf="@id/btn_next"
-            app:layout_constraintTop_toBottomOf="@id/btn_next" />
+            app:layout_constraintTop_toBottomOf="@id/btn_next"
+            android:layout_marginTop="12dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
