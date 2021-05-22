@@ -8,26 +8,88 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/graphic_bubble">
+
+        <TextView
+            android:id="@+id/tv_who_will"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="누가 걸릴까요?"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="두근 두근"
+            app:layout_constraintBottom_toTopOf="@id/iv_pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_who_will"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <ImageView
+            android:id="@+id/iv_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="1dp"
+            android:src="@drawable/graphic_fin"
+            app:layout_constraintBottom_toTopOf="@id/iv_roulette"
+            app:layout_constraintEnd_toEndOf="@id/iv_roulette"
+            app:layout_constraintStart_toStartOf="@id/iv_roulette"
+            app:layout_constraintTop_toTopOf="@id/iv_roulette"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/iv_roulette"
-            android:src="@drawable/ic_launcher_foreground"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/graphic_roulette"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_talking_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="대답 할 사람"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/bt_temp"
+            app:layout_constraintEnd_toStartOf="@id/iv_circle"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_roulette" />
+
+        <ImageView
+            android:id="@+id/iv_circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_oval"
+            app:layout_constraintBottom_toBottomOf="@id/tv_talking_person"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_talking_person"
+            app:layout_constraintTop_toTopOf="@id/tv_talking_person" />
 
         <Button
             android:id="@+id/bt_temp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="temp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/shape_next_button"
+            android:text="다음"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

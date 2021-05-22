@@ -12,7 +12,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.jinsool.R
 import com.example.jinsool.databinding.FragmentGameBinding
-import com.example.jinsool.databinding.FragmentPenaltyBinding
 
 class GameFragment : Fragment() {
     private var _binding: FragmentGameBinding? = null
