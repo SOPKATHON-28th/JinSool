@@ -1,6 +1,7 @@
 package com.example.jinsool.api
 
 import com.example.jinsool.request.RequestData
+import com.example.jinsool.response.ResponseData
 import com.example.jinsool.response.ResponsePlayerData
 import retrofit2.Call
 import retrofit2.http.Body
@@ -10,7 +11,7 @@ import retrofit2.http.Query
 
 interface PenalityService {
     @GET("/api/penalty")
-    fun getRequest() : Call<Int>
+    fun getRequest() : Call<ResponseData>
     @POST("/api/player")
     fun getQuestion(
 //        @Query("player") player: Int,

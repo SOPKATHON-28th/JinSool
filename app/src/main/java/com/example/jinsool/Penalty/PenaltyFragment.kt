@@ -14,7 +14,8 @@ import com.example.jinsool.R
 import com.example.jinsool.api.PenalityCreater
 import com.example.jinsool.databinding.FragmentGameBinding
 import com.example.jinsool.databinding.FragmentPenaltyBinding
-import response.ResponseData
+import com.example.jinsool.response.ResponseData
+//import response.ResponseData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
