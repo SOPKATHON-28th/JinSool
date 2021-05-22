@@ -20,7 +20,7 @@ class SelectFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_select, container, false)
-        binding.btTemp.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             (activity as GameActivity).navigatePenalty()
         }
         return binding.root
