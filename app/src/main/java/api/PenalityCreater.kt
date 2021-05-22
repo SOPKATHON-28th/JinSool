@@ -12,5 +12,6 @@ object PenalityCreater {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val penalityService : penalityService = retrofit.create(api.penalityService::class.java)
+    val penalityService : PenalityService = retrofit.create(PenalityService::class.java)
+
 }
