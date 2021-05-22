@@ -28,7 +28,10 @@ class GameActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    fun navigateSelect() {
+    fun navigateSelect(from : String) {
+        val bundle = Bundle()
+        bundle.putString("from", from)
+        selectFragment.arguments = bundle
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_root, selectFragment)
         transaction.commit()

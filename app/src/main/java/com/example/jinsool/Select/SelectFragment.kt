@@ -26,6 +26,9 @@ class SelectFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configureNavigation()
+
+        val result = arguments?.getString("from").toString()
+        binding.tvQuestion.text = result
     }
 
     private fun configureNavigation() {

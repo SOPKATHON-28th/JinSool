@@ -25,7 +25,9 @@ class QuestionFragment : Fragment() {
     private var _binding: FragmentQuestionBinding? = null
     private val binding get() = _binding ?: error("에러")
 
-    var position : Int = 0
+    private var temp = ""
+
+    var position: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,9 +43,10 @@ class QuestionFragment : Fragment() {
         startCountDownTimer()
 
         val requestData = RequestData(6, 1)
-        val call : Call<ResponsePlayerData> = PenalityCreater.penalityService.getQuestion(RequestData(6, 1))
+        val call: Call<ResponsePlayerData> =
+            PenalityCreater.penalityService.getQuestion(RequestData(6, 1))
         Log.d("아아", "success")
-        call.enqueue(object : Callback <ResponsePlayerData> {
+        call.enqueue(object : Callback<ResponsePlayerData> {
             override fun onResponse(
                 call: Call<ResponsePlayerData>,
                 response: Response<ResponsePlayerData>
@@ -53,10 +56,11 @@ class QuestionFragment : Fragment() {
                     val questionList = response.body()?.data?.question
                     Log.d("ttt", response.body()?.data.toString())
                     Log.d("서버", "${questionList}")
+                    temp = questionList?.get(position)?.title.toString()
                     binding.tvQuestion.setText(questionList?.get(position++)?.title)
-                    if(position == questionList?.size){
-                       Log.d("마지막 배열", "dd")
-                       position = 0
+                    if (position == questionList?.size) {
+                        Log.d("마지막 배열", "dd")
+                        position = 0
                     }
                 } else {
                     Log.d("서버", "fail")
@@ -71,13 +75,13 @@ class QuestionFragment : Fragment() {
     }
 
     private fun startCountDownTimer() {
-        val countDownTimer : CountDownTimer = object: CountDownTimer(8000, 1000) {
+        val countDownTimer: CountDownTimer = object : CountDownTimer(8000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 binding.tvTimer.text = "${(millisUntilFinished.toFloat() / 1000.0f).roundToInt()}"
             }
 
             override fun onFinish() {
-                (activity as GameActivity).navigateSelect()
+                (activity as GameActivity).navigateSelect(temp)
             }
 
         }
