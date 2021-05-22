@@ -12,14 +12,38 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/bt_temp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="temp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/btn_next"
+            android:layout_width="324dp"
+            android:layout_height="48dp"
+            android:background="@drawable/rect"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:text="다음"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="586dp"
+            android:layout_marginBottom="102dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bt_temp"
+            android:layout_width="324dp"
+            android:layout_height="48dp"
+            android:background="@drawable/rect"
+            android:text="처음으로"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="646dp"
+            android:layout_marginBottom="42dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/penalty"
@@ -31,6 +55,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="400dp"
             tools:src="@drawable/logo" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

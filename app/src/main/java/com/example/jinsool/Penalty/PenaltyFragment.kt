@@ -29,6 +29,7 @@ class PenaltyFragment : Fragment() {
         binding.btTemp.setOnClickListener {
             (activity as GameActivity).navigateGame()
         }
+
         return binding.root
     }
 
