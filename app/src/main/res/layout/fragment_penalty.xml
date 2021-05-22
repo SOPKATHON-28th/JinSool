@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
     <data>
 
@@ -9,17 +10,78 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#f9f2e2">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="89dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="131dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginBottom="615dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="벌칙!" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="29dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="574dp"
+            android:layout_marginTop="157dp"
+            android:layout_marginStart="136dp"
+            android:layout_marginEnd="127dp"
+            android:text="술잔 비우기"
+            />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="324dp"
+            android:layout_height="48dp"
+            android:background="@drawable/rect"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:text="다음"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="586dp"
+            android:layout_marginBottom="102dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/bt_temp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="temp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="324dp"
+            android:layout_height="48dp"
+            android:background="@drawable/rect"
+            android:text="처음으로"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="646dp"
+            android:layout_marginBottom="42dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/penalty"
@@ -29,8 +91,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="400dp"
-            tools:src="@drawable/logo" />
+            android:layout_marginTop="214dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="202dp"
+            tools:src="@drawable/graphic_cup_one" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
