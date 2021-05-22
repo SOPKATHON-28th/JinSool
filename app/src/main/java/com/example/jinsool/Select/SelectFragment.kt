@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.jinsool.GameActivity.GameActivity
 import com.example.jinsool.R
 import com.example.jinsool.databinding.FragmentQuestionBinding
 import com.example.jinsool.databinding.FragmentSelectBinding
@@ -19,7 +20,9 @@ class SelectFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_select, container, false)
-
+        binding.btTemp.setOnClickListener {
+            (activity as GameActivity).navigatePenalty()
+        }
         return binding.root
     }
 }
