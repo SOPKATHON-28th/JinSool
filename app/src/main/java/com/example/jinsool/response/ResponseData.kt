@@ -1,4 +1,4 @@
-package response
+package com.example.jinsool.response
 
 data class ResponseData(
     val status : String,
