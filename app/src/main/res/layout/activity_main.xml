@@ -12,116 +12,131 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity.MainActivity">
 
-        <ImageView
-            android:id="@+id/iv_logo"
+        <TextView
+            android:id="@+id/tv_jinsool_game"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground"
-            app:layout_constraintBottom_toTopOf="@id/cl_big_view"
+            android:text="진술게임"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_jeockshyeo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_big_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        <TextView
+            android:id="@+id/tv_jeockshyeo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="뇌세포를 술로 적셔볼까요?"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_write_player_cnt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_jinsool_game" />
+
+        <TextView
+            android:id="@+id/tv_write_player_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. 인원 수를 입력해주세요"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/et_player_cnt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_jeockshyeo" />
+
+        <EditText
+            android:id="@+id/et_player_cnt"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:background="@drawable/shape_edittext"
+            app:layout_constraintBottom_toTopOf="@id/tv_pick_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_write_player_cnt" />
+
+        <TextView
+            android:id="@+id/tv_myeong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="명"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/et_player_cnt"
+            app:layout_constraintStart_toEndOf="@id/et_player_cnt"
+            app:layout_constraintTop_toTopOf="@id/et_player_cnt" />
+
+        <TextView
+            android:id="@+id/tv_pick_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. 각자의 색을 정해주세요"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_third_question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_player_cnt" />
+
+        <TextView
+            android:id="@+id/tv_third_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. 질문 난이도 선택하기"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/iv_green_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+
+        <ImageView
+            android:id="@+id/iv_green_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_ellipse_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_red_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="순한맛"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_green_circle"
+            app:layout_constraintEnd_toEndOf="@id/iv_green_circle"
+            app:layout_constraintStart_toStartOf="@id/iv_green_circle"
+            app:layout_constraintTop_toTopOf="@id/iv_green_circle" />
+
+        <ImageView
+            android:id="@+id/iv_red_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_ellipse_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.8"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toEndOf="@id/iv_green_circle"
+            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
 
-            <TextView
-                android:id="@+id/tv_jinsool_game"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="진술게임"
-                app:layout_constraintBottom_toTopOf="@id/tv_jeockshyeo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_jeockshyeo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="뇌세포를 술로 적셔볼까요?"
-                app:layout_constraintBottom_toTopOf="@id/tv_write_player_cnt"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_jinsool_game" />
-
-            <TextView
-                android:id="@+id/tv_write_player_cnt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1. 인원 수를 입력해주세요"
-                app:layout_constraintBottom_toTopOf="@id/et_player_cnt"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_jeockshyeo" />
-
-            <EditText
-                android:id="@+id/et_player_cnt"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:background="@drawable/shape_edittext"
-                app:layout_constraintBottom_toTopOf="@id/tv_pick_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_write_player_cnt" />
-
-            <TextView
-                android:id="@+id/tv_myeong"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="명"
-                app:layout_constraintBottom_toBottomOf="@id/et_player_cnt"
-                app:layout_constraintStart_toEndOf="@id/et_player_cnt"
-                app:layout_constraintTop_toTopOf="@id/et_player_cnt" />
-
-            <TextView
-                android:id="@+id/tv_pick_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2. 각자의 색을 정해주세요"
-
-                app:layout_constraintBottom_toTopOf="@id/iv_green_circle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_player_cnt" />
-
-            <ImageView
-                android:id="@+id/iv_green_circle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_ellipse_1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/iv_red_circle"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="순한맛"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@id/iv_green_circle"
-                app:layout_constraintEnd_toEndOf="@id/iv_green_circle"
-                app:layout_constraintStart_toStartOf="@id/iv_green_circle"
-                app:layout_constraintTop_toTopOf="@id/iv_green_circle" />
-
-            <ImageView
-                android:id="@+id/iv_red_circle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_ellipse_2"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/iv_green_circle"
-                app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="순한맛"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_red_circle"
+            app:layout_constraintEnd_toEndOf="@id/iv_red_circle"
+            app:layout_constraintStart_toStartOf="@id/iv_red_circle"
+            app:layout_constraintTop_toTopOf="@id/iv_red_circle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
