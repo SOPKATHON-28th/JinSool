@@ -1,5 +1,7 @@
 ﻿## 서비스명: 진술게임
+ <img src="https://user-images.githubusercontent.com/57510192/119243326-9726dc80-bba0-11eb-852c-2fdea61b4d3c.gif" width="270">
 당신의 진솔적인 기억을 나눠보는 술자리 게임
+
 
 ## 역할 담당
 ### 강수현
