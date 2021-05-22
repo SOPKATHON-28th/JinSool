@@ -40,8 +40,8 @@ class QuestionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         startCountDownTimer()
 
-        val requestData = RequestData(2, 1)
-        val call : Call<ResponsePlayerData> = PenalityCreater.penalityService.getQuestion(RequestData(2, 1))
+        val requestData = RequestData(6, 1)
+        val call : Call<ResponsePlayerData> = PenalityCreater.penalityService.getQuestion(RequestData(6, 1))
         Log.d("아아", "success")
         call.enqueue(object : Callback <ResponsePlayerData> {
             override fun onResponse(
