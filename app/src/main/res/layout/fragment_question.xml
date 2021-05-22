@@ -10,14 +10,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/bt_temp"
+        <ImageView
+            android:id="@+id/img_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="temp"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="에게 질문해주시면 됩니다."
+            app:layout_constraintTop_toTopOf="@+id/img_color"
+            app:layout_constraintStart_toEndOf="@id/img_color"/>
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="당신의 기억 속에 000씨를 좋아합니까?"
+            app:layout_constraintTop_toBottomOf="@+id/img_color"
+            app:layout_constraintStart_toStartOf="@id/img_color"/>
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
 
