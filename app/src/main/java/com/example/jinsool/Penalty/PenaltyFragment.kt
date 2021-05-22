@@ -1,5 +1,6 @@
 package com.example.jinsool.Penalty
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.jinsool.GameActivity.GameActivity
+import com.example.jinsool.MainActivity.MainActivity
 import com.example.jinsool.R
 import com.example.jinsool.api.PenalityCreater
 import com.example.jinsool.databinding.FragmentGameBinding
@@ -27,7 +29,17 @@ class PenaltyFragment : Fragment() {
     ): View? {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_penalty, container, false)
         binding.btTemp.setOnClickListener {
+            //룰렛뷰로 이동하기
+            //처음으로 버튼
             (activity as GameActivity).navigateGame()
+        }
+        binding.btnNext.setOnClickListener {
+            //main뷰로 이동하기
+            //다음버튼
+            activity?.let{
+                val intent = Intent(context, MainActivity::class.java)
+                startActivity(intent)
+            }
         }
 
         return binding.root
