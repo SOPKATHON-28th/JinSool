@@ -9,7 +9,7 @@ data class ResponsePlayerData(
 
 data class PlayerData(
     val player: Int,
-    val question: MutableList<PlayerItem>?
+    val question: List<PlayerItem>?
 )
 
 data class PlayerItem(
