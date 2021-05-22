@@ -28,19 +28,17 @@ class PenaltyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_penalty, container, false)
-        binding.btTemp.setOnClickListener {
-            //룰렛뷰로 이동하기
-            //처음으로 버튼
-            (activity as GameActivity).navigateGame()
-        }
-        binding.btnNext.setOnClickListener {
-            //main뷰로 이동하기
-            //다음버튼
+        binding.btTemp.setOnClickListener{
             activity?.let{
-                val intent = Intent(context, MainActivity::class.java)
+                val intent = Intent(context,MainActivity::class.java)
                 startActivity(intent)
             }
         }
+        binding.btnNext.setOnClickListener{
+            (activity as GameActivity).navigateGame()
+        }
+
+
 
         return binding.root
     }
