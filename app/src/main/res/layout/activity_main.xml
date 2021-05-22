@@ -10,7 +10,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/bg_alcohol"
         tools:context=".MainActivity.MainActivity">
+
 
         <TextView
             android:id="@+id/tv_jinsool_game"
@@ -51,9 +53,10 @@
         <EditText
             android:id="@+id/et_player_cnt"
             android:layout_width="100dp"
+            android:textCursorDrawable="@color/orange"
             android:layout_height="40dp"
-            android:inputType="number"
             android:background="@drawable/shape_edittext"
+            android:inputType="number"
             app:layout_constraintBottom_toTopOf="@id/tv_pick_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +74,13 @@
             app:layout_constraintStart_toEndOf="@id/et_player_cnt"
             app:layout_constraintTop_toTopOf="@id/et_player_cnt" />
 
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="완료"-->
+<!--            android:background="@drawable/shape_next_button"-->
+<!--            app:layout_constraintStart_toEndOf=""-->
+
         <TextView
             android:id="@+id/tv_pick_color"
             android:layout_width="wrap_content"
@@ -83,17 +93,111 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_player_cnt" />
 
+        <ImageView
+            android:id="@+id/iv_circle1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_oval_red"
+            app:layout_constraintEnd_toStartOf="@id/iv_circle2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+
+        <ImageView
+            android:id="@+id/iv_circle2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_oval_orange"
+            app:layout_constraintEnd_toStartOf="@id/iv_circle3"
+            app:layout_constraintStart_toEndOf="@id/iv_circle1"
+            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+
+        <ImageView
+            android:id="@+id/iv_circle3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_oval_yellow"
+            app:layout_constraintEnd_toStartOf="@id/iv_circle4"
+            app:layout_constraintStart_toEndOf="@id/iv_circle2"
+            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+
+        <ImageView
+            android:id="@+id/iv_circle4"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_oval_greeen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_circle3"
+            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+
+        <ImageView
+            android:id="@+id/iv_circle5"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_oval_blue"
+            app:layout_constraintBottom_toTopOf="@id/tv_third_question"
+            app:layout_constraintEnd_toStartOf="@id/iv_circle6"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_circle1" />
+
+        <ImageView
+            android:id="@+id/iv_circle6"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_oval_purple"
+            app:layout_constraintBottom_toTopOf="@id/tv_third_question"
+            app:layout_constraintEnd_toStartOf="@id/iv_circle7"
+            app:layout_constraintStart_toEndOf="@id/iv_circle5"
+            app:layout_constraintTop_toBottomOf="@id/iv_circle2" />
+
+        <ImageView
+            android:id="@+id/iv_circle7"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_oval_purple2"
+            app:layout_constraintBottom_toTopOf="@id/tv_third_question"
+            app:layout_constraintEnd_toStartOf="@id/iv_circle8"
+            app:layout_constraintStart_toEndOf="@id/iv_circle6"
+            app:layout_constraintTop_toBottomOf="@id/iv_circle3" />
+
+        <ImageView
+            android:id="@+id/iv_circle8"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_oval_gray"
+            app:layout_constraintBottom_toTopOf="@id/tv_third_question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_circle7"
+            app:layout_constraintTop_toBottomOf="@id/iv_circle4" />
+
         <TextView
             android:id="@+id/tv_third_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="3. 질문 난이도 선택하기"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@id/iv_green_circle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+            app:layout_constraintTop_toBottomOf="@id/tv_pick_color"
+             />
 
         <ImageView
             android:id="@+id/iv_green_circle"
@@ -103,7 +207,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/iv_red_circle"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+            app:layout_constraintTop_toBottomOf="@id/tv_third_question" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -124,7 +228,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/iv_green_circle"
-            app:layout_constraintTop_toBottomOf="@id/tv_pick_color" />
+            app:layout_constraintTop_toBottomOf="@id/tv_third_question" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -13,4 +13,10 @@
     <color name="beige">#F9F2E2</color>
     <color name="gray">#C2C2C2</color>
     <color name="gray2">#A2A2A2</color>
+    <color name="yellow">#ffdb1e</color>
+    <color name="green2">#75c84c</color>
+    <color name="blue">#6da8ff</color>
+    <color name="purple">#003585</color>
+    <color name="purple2">#9224ff</color>
+    <color name="gray3">#C4C4C4</color>
 </resources>
