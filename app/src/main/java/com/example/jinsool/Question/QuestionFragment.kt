@@ -32,7 +32,7 @@ class QuestionFragment : Fragment() {
     }
 
     private fun startCountDownTimer() {
-        val countDownTimer : CountDownTimer = object: CountDownTimer(20000, 1000) {
+        val countDownTimer : CountDownTimer = object: CountDownTimer(8000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 binding.tvTimer.text = "${(millisUntilFinished.toFloat() / 1000.0f).roundToInt()}"
             }
