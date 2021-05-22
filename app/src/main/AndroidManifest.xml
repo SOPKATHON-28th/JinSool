@@ -11,14 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JinSool"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity.MainActivity">
+        <activity android:name=".MainActivity.MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameActivity.GameActivity">
+        <activity android:name=".GameActivity.GameActivity" android:screenOrientation="portrait">
 
 
         </activity>

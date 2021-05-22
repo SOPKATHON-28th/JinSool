@@ -30,14 +30,14 @@ class GameFragment : Fragment() {
         }
 
         binding.ivRoulette.setOnClickListener {
-            binding.ivRoulette.startAnimation(spin(1000))
+            binding.ivRoulette.startAnimation(spin(5000))
         }
 
         return binding.root
     }
 
     private fun spin(dur: Int): RotateAnimation {
-        val randomDegree = (100..359).random().toFloat()
+        val randomDegree = (100..3590).random().toFloat()
         //val random = 1200F
         val rot = RotateAnimation(
             0F,
@@ -55,7 +55,7 @@ class GameFragment : Fragment() {
             binding.ivRoulette.startAnimation(rot)
         }
         rot.fillAfter = true
-        Log.e("loser", checkLoser(randomDegree.toInt()).toString())
+        //Log.e("loser", checkLoser(randomDegree.toInt()).toString())
         return rot
     }
 
