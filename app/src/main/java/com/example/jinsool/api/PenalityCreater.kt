@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object PenalityCreater {
 
-    private const val BASE_URL ="13.59.52.111"
+    private const val BASE_URL ="http://13.59.52.111:5000"
 
     private val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)

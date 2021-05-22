@@ -34,23 +34,26 @@ class PenaltyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val random = (0..2).random()
-        when (random){
-            0-> binding.penalty.setImageResource(R.drawable.and)
-            1-> binding.penalty.setImageResource(R.drawable.beme_icon)
-            else -> binding.penalty.setImageResource(R.drawable.logo)
-        }
-        Log.d("랜덤값","$random")
 
-        val call : Call<Int> = PenalityCreater.penalityService
+
+
+
+        val call : Call<ResponseData> = PenalityCreater.penalityService
             .getRequest()
 
-        call.enqueue(object : Callback<Int> {
+        call.enqueue(object : Callback<ResponseData> {
             override fun onResponse(
-                call: Call<Int>,
-                response: Response<Int>) {
+                call: Call<ResponseData>,
+                response: Response<ResponseData>) {
                 if(response.isSuccessful){
                     Log.d("서버통신","성공!!!")
+                    val random = response.body()?.data?.penaltyIdx
+                    when (random){
+                        0-> binding.penalty.setImageResource(R.drawable.and)
+                        1-> binding.penalty.setImageResource(R.drawable.beme_icon)
+                        else -> binding.penalty.setImageResource(R.drawable.logo)
+                    }
+                    Log.d("랜덤값","$random")
                 }
                 else{
                     Log.d("서버통신","실패ㅠㅠ")
@@ -58,9 +61,9 @@ class PenaltyFragment : Fragment() {
                 }
 
             }
+            override fun onFailure(call: Call<ResponseData>, t: Throwable) {
+                Log.d("서버통신","onFailure")
 
-            override fun onFailure(call: Call<Int>, t: Throwable) {
-                Log.d("NetworkTest","error:$t")
             }
 
 

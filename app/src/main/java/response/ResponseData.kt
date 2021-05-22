@@ -1,5 +1,7 @@
 package response
 
+import com.google.gson.annotations.SerializedName
+
 data class ResponseData(
     val status : String,
     val success : Boolean,
@@ -8,8 +10,8 @@ data class ResponseData(
 
 ){
     data class Data(
+
         val penaltyIdx : Int,
-        val img : String
 
 
     )
