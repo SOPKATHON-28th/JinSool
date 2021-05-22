@@ -1,6 +1,7 @@
 package com.example.jinsool.Penalty
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,6 +30,12 @@ class PenaltyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val random = (0..2).random()
+        when (random){
+            0-> binding.penalty.setImageResource(R.drawable.and)
+            1-> binding.penalty.setImageResource(R.drawable.beme_icon)
+            else -> binding.penalty.setImageResource(R.drawable.logo)
+        }
+        Log.d("랜덤값","$random")
 
 
     }
