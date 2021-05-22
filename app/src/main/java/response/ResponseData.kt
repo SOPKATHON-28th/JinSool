@@ -1,0 +1,16 @@
+package response
+
+data class ResponseData(
+    val status : String,
+    val success : Boolean,
+    val message : String,
+    val data : Data?
+
+){
+    data class Data(
+        val penaltyIdx : Int,
+        val img : String
+
+
+    )
+}
