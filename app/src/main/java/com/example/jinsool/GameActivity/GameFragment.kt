@@ -37,7 +37,8 @@ class GameFragment : Fragment() {
     }
 
     private fun spin(dur: Int): RotateAnimation {
-        val randomDegree = (100..3590).random().toFloat()
+        //val randomDegree = (100..3590).random().toFloat()
+        val randomDegree = 3000F
         //val random = 1200F
         val rot = RotateAnimation(
             0F,
